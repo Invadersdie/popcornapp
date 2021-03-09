@@ -1,8 +1,6 @@
 # popcornapp
 
-### Example MVP(Moxy) project
-
-#### Technologies used
+###Technologies used
 
 * Architecture: MVP(Moxy)
 * Lang: Kotlin
