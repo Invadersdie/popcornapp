@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorSecondary">#000000</color>
+
+    <color name="colorAccent">#4db6ac</color>
+    <color name="colorPrimaryText">#ffffff</color>
+    <color name="colorSecondaryText">#b3ffffff</color>
+    <color name="colorDisabledText">#7fffffff</color>
+    <color name="colorSubMenuBackground">#212121</color>
+    <color name="colorMenuBackground">#000000</color>
+
+    <color name="background">#000000</color>
+    <color name="border_color">#aaFFFFFF</color>
+    <color name="backgroundSecondary">#fafafa</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="celeste">#D6D9D3</color>
+    <color name="blue">#0000FF</color>
+    <color name="oxford_blue">#3B465A</color>
+    <color name="oxford_blue_light">#465166</color>
+    <color name="oxford_blue_dark">#131f31</color>
+
+    <color name="amber">#ffc107</color>
+    <color name="light_blue">#03a9f4</color>
+    <color name="pink">#e91e63</color>
+    <color name="green">#4caf50</color>
+</resources>

@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'io.objectbox'
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.godelbrestandroid.popcornapp"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+def dagger_version = "2.22"
+def moxy_version = "1.7.0"
+def retrofit_version = "2.4.0"
+def glideVersion = "4.9.0"
+def glideTransformationVersion = "4.1.0"
+def glideGPUVersion = "2.0.4"
+def espressoVersion = "3.2.0"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation "org.jetbrains.kotlin:kotlin-test-junit5:$kotlin_version"
+
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+
+    //Moxy X
+    implementation "tech.schoolhelper:moxy-x:$moxy_version"
+    kapt "tech.schoolhelper:moxy-x-compiler:$moxy_version"
+    implementation "tech.schoolhelper:moxy-x-android:$moxy_version"
+    implementation "tech.schoolhelper:moxy-x-androidx:$moxy_version"
+
+    //Dagger
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt  "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation "androidx.core:core-ktx:1.1.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // MovieImages loading/caching/appearing
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation "com.github.bumptech.glide:recyclerview-integration:$glideVersion"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+    implementation "jp.wasabeef:glide-transformations:$glideTransformationVersion"
+    implementation "jp.co.cyberagent.android:gpuimage:$glideGPUVersion"
+    implementation "de.hdodenhof:circleimageview:3.0.0"
+
+    implementation "io.objectbox:objectbox-rxjava:$objectboxVersion"
+    implementation 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0'
+
+}

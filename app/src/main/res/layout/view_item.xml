@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="@dimen/width_item_home"
+    android:layout_height="@dimen/height_item_home">
+
+    <ImageView
+        android:id="@+id/item_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/person_photo"
+        app:layout_constraintBottom_toTopOf="@id/item_name"
+        app:layout_constraintDimensionRatio="H, 2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_photo"
+        tools:text="Vasua Pupkin" />
+
+    <TextView
+        android:id="@+id/item_additional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/colorSecondaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_name"
+        tools:text="Фильм, фильм, фильм" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
